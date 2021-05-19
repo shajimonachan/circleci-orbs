@@ -18,7 +18,7 @@ template:
       image: shajimonachan/test:5
       imagePullPolicy: Always
       ports:
-      - containerPort: 5000
+      - containerPort: 3000
         name: hello
 
 ---
@@ -30,8 +30,8 @@ labels:
   app: hello
 spec:
 ports:
-  - port: 5000
-    targetPort: 5000
+  - port: 3000
+    targetPort: 3000
 selector:
   app: hello
   tier: hello
